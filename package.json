@@ -1,0 +1,41 @@
+{
+  "name": "trab2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "knexfile.js",
+  "scripts": {
+    "test": "jest",
+    "build": "sucrase ./src -d ./dist --transforms imports",
+    "dev": "nodemon app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "nodemonConfig": {
+    "execMap": {
+      "js": "node -r sucrase/register"
+    }
+  },
+  "jest": {
+    "transform": {
+      ".(js|jsx|tx|tsx)": "@sucrase/jest-plugin"
+    }
+  },
+  "dependencies": {
+    "@types/jest": "^26.0.23",
+    "bcrypt": "^5.0.1",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "knex": "^0.95.6",
+    "mysql2": "^2.2.5",
+    "nodemon": "^2.0.9"
+  },
+  "devDependencies": {
+    "@sucrase/jest-plugin": "^2.1.0",
+    "jest": "^25.5.4",
+    "sucrase": "^3.18.2",
+    "supertest": "^6.1.3"
+  }
+}
